@@ -1,0 +1,51 @@
+{
+  "name": "notary-agent",
+  "version": "0.0.0",
+  "description": "Sample implementation of notary agent for DBoM",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "dotenv": "^16.3.1",
+    "jaeger-client": "^3.18.0",
+    "morgan": "~1.9.1",
+    "nats": "^2.13.1",
+    "node-cache": "^5.1.1",
+    "nodemon": "^3.0.1",
+    "opentracing": "^0.14.7",
+    "sigstore": "^2.1.0",
+    "winston": "^3.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.9",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "cross-env": "^7.0.2",
+    "decache": "^4.6.0",
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "jsdoc": "^3.6.5",
+    "minami": "^1.2.3",
+    "mocha": "^8.1.2",
+    "mocha-jenkins-reporter": "^0.4.5",
+    "mocha-prepare": "^0.1.0",
+    "mocha-prepare-promise": "0.0.2",
+    "nyc": "^15.1.0",
+    "sinon": "^9.2.1",
+    "sinon-chai": "^3.5.0"
+  },
+  "nyc": {
+    "all": true,
+    "exclude": [
+      "controller/tracer.js"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true
+  }
+}
